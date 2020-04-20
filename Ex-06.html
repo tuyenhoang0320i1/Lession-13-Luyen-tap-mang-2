@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    let array = ['-', 'sát', 'cơ  động', '1', '1', '3'];
+    let array = ['cảnh-', 'sát-', 'cơ - động-', '1', '1', '3'];
     function checkAndReplaca() {
-        debugger
-        let key = '_';
-        for (let i = 0; i < array.length; i ++) {
-            if (array[i] === '-') {
-                array[i] === key;
-                document.write(array[i]);
+        let stringnew = "";
+        for (i = 0; i < array.length; i++) {
+            let string = array[i];
+            for (j = 0; j < string.length; j++) {
+                stringnew = string.replace(/-/g, "_");
             }
+            array[i] = stringnew;
         }
-
+        document.write("Mang sau khi sua khi la: " + array.join(" , "));
     }
-    checkAndReplaca();
+        checkAndReplaca();
 </script>
 </body>
 </html>
