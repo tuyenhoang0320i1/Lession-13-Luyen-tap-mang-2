@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Khỏi tạo mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let array2D = new Array();
+
+    function inputArray(a) { debugger
+        let rows, cols;
+        rows = +prompt(" Enter rows: ");
+        cols = +prompt(" Enter cols: ");
+        for (i = 0; i < rows; i++) {
+            a[i] = new Array();
+            for (j = 0; j < cols; j++) {
+                a[i][j] = Math.floor(Math.random() * 100);
+            }
+        }
+    }
+
+    function displayArray(a) {
+        let sum = 0;
+        document.write(" Array added: <br/>");
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                document.write(a[i][j] + "  ");
+                sum = sum + a[i][j];
+            }
+            document.write("<br/>");
+        }
+        document.write("<br/>Sum is: " + sum);
+    }
+    inputArray(array2D);
+    displayArray(array2D);
+</script>
+</body>
+</html>
