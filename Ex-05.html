@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>So sánh hai chuỗi</title>
 </head>
 <body>
 <script>
     let a = ['cảnh', 'sát', 'cơ động', '1', '1', '3'];
     let b = ['cảnh', 'sát', 'cơ động', '1', '1', '2'];
     function arraysCompare(a, b) {
-        var i = a.length;
+        let i = a.length;
         if (i != b.length) return false;
         while (i--) {
             if (a[i] !== b[i]) return false;
         }
         return true;
     }
-    arraysCompare(a, b );
+   alert(arraysCompare(a, b ));
 </script>
 </body>
 </html>

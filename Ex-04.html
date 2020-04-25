@@ -2,12 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài 4: Đếm số từ trong một chuỗi</title>
+    <title>Đếm số từ trong một chuỗi</title>
 </head>
 <body>
 <script>
-    let array = ['apple', 'orange', 'lemon', 'kiwi'];
+    let string = prompt("Nhap vao 1 chuoi: ");
+    let strl = string.length;
+    let couter = 0;
+    let stringUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let stringLower = "abcdefghijklmnopqrstuvwxyz";
 
+    for (i = 0; i < strl; i++) {
+        let couterstring = 0;
+        for (j = 0; j < 26; j++) {
+            if ((string[i] != stringLower[j]) && (string[i] != stringUpper[j])) {
+                couterstring++;
+            }
+        }
+        if (couterstring == 26) {
+            couter++;
+        }
+    }
+    for (i = 0; i < 26; i++) {
+        if ((string[sl - 1] == stringUpper[i]) || (string[sl - 1] == stringLower[i])) {
+            couter++;
+            break;
+        }
+    }
+    document.write("Chuoi nhap vao la: " + string + "<br>");
+    document.write("So tu co trong chuoi la: " + couter);
 
+</script>
 </body>
 </html>
